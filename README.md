@@ -12,6 +12,11 @@ sudo bash k8s-setup.sh
 ```
 The lab machine will be rebooted once when above script is completed, you will be automatically logged out of the lab machine.
 
+#### Disable swap:
+
+```bash
+sudo swapoff -a
+```
 
 ### B. Run kubernetes cluster
 
