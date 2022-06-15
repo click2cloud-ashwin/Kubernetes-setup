@@ -64,10 +64,7 @@ echo Setup: Basic
 sudo systemctl stop ufw
 sudo systemctl disable ufw
 sudo swapoff -a
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
-sudo partprobe
-sudo echo "vm.swappiness=0" | sudo tee --append /etc/sysctl.conf
-sudo sysctl -p
+partprobe
 IP_ADDR=$(hostname -I | awk '{print $1}')
 HOSTNAME=$(hostname)
 sudo sed -i '2s/.*/'$IP_ADDR' '$HOSTNAME'/' /etc/hosts
