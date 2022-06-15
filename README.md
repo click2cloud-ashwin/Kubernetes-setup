@@ -63,7 +63,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 ### C. Deploy Calico as CNI
 
 ```bash
-kubectl apply -f kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 ```
 
 Note: On single node, to schedule pod you need to run the following command to remove taint.
