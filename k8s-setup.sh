@@ -73,6 +73,7 @@ HOSTNAME=$(hostname)
 sudo sed -i '2s/.*/'$IP_ADDR' '$HOSTNAME'/' /etc/hosts
 sudo rm -rf /etc/resolv.conf
 sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+sudo rm -rf /etc/cni/*
 
 sudo apt autoremove -y
 
