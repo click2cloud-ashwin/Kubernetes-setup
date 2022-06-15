@@ -72,6 +72,12 @@ sudo rm -rf /etc/resolv.conf
 sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 sudo rm -rf /etc/cni/*
 
+echo Setup: Install K9s CLI To Manage Your Clusters
+
+curl -sS https://webinstall.dev/k9s | bash
+export PATH="/root/.local/bin:$PATH"
+
+
 sudo apt autoremove -y
 
 echo Setup: Machine setup completed!
